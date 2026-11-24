@@ -1,67 +1,297 @@
-.kaitori-kv_image {
+.kaitori-wine,
+.kaitori-wine *,
+.kaitori-wine *::before,
+.kaitori-wine *::after {
+  box-sizing: border-box;
+}
+
+.kaitori-wine {
+  max-width: 638px;
+  margin-right: auto;
+  margin-left: auto;
+  color: #333;
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.kaitori-wine-kv,
+.kaitori-wine-product_image {
+  margin: 0;
+  background: #ccc;
+}
+
+.kaitori-wine-kv {
   width: 100%;
-  margin: auto;
+}
+
+.kaitori-wine-kv img,
+.kaitori-wine-product_image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #ccc;
+}
+
+.kaitori-wine .kaitori-wine-lineup_heading {
+  width: fit-content;
+  margin: 32px auto 0;
+  padding: 16px 32px;
+  border-radius: 50px;
+  background: #fceae0;
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
   text-align: center;
 }
 
-.kaitori-kv_image img {
-  width: 100%;
+.kaitori-wine-product {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 25px;
+  margin: 0;
+  padding: 40px;
 }
 
-.kaitori-product_section {
-  margin: 10px;
-  border: 2px solid #fceae0;
-}
-
-.kaitori-product_title {
-  background: #fffaec;
-  border-top: 1px solid #fceae0;
-  border-bottom: 1px solid #fceae0;
-  padding: 10px 5px;
+.kaitori-wine .kaitori-wine-product_name {
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
   line-height: 1.2;
   text-align: center;
-  font-size: 18px;
 }
 
-.kaitori-product_detail {
-  padding: 40px 20px;
-  line-height: 1.6;
+.kaitori-wine-product_main {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.kaitori-wine-product_image {
+  flex: 0 0 240px;
+  width: 240px;
+}
+
+.kaitori-wine-specs,
+.kaitori-wine-info_list {
+  margin: 0;
+}
+
+.kaitori-wine-specs {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 0;
+}
+
+.kaitori-wine-spec,
+.kaitori-wine-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.kaitori-wine-spec {
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.kaitori-wine-spec:first-child {
+  padding-top: 0;
+}
+
+.kaitori-wine-spec:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.kaitori-wine-spec_label,
+.kaitori-wine-spec_value,
+.kaitori-wine-info_label,
+.kaitori-wine-info_value {
+  margin: 0;
+  color: #333;
+}
+
+.kaitori-wine-spec_label,
+.kaitori-wine-info_label {
+  flex: none;
+  font-weight: 700;
+  text-align: right;
+}
+
+.kaitori-wine-spec_label {
+  width: 49px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.kaitori-wine-spec_value {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.kaitori-wine-description {
+  margin: 0;
+  color: #333;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
-.kaitori-accordion_box {
+.kaitori-wine-accordion_box {
+  width: 100%;
+  background: #fffaec;
   overflow: hidden;
 }
 
-.kaitori-accordion {
-  padding: 15px;
-  cursor: pointer;
+.kaitori-wine-accordion {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid #ccc;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0 40px;
+  border: 0;
+  background: transparent;
+  color: #333;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.kaitori-accordion_title {
+.kaitori-wine-accordion:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: -2px;
+}
+
+.kaitori-wine-accordion .material-symbols-outlined {
+  position: absolute;
+  right: 21px;
   font-size: 18px;
-}
-
-.kaitori-accordion .material-symbols-outlined {
+  line-height: 1;
   transform: rotate(180deg);
   transition: transform 0.25s ease;
 }
 
-.kaitori-accordion.is-open .material-symbols-outlined {
+.kaitori-wine-accordion.is-open .material-symbols-outlined {
   transform: rotate(0deg);
 }
 
-.kaitori-accordion_menu {
+.kaitori-wine-accordion_menu {
   display: none;
-  padding: 0 15px 15px;
-  background: #fff;
+  padding: 8px 27px 24px;
   overflow: hidden;
 }
 
-.kaitori-accordion_menu.open {
+.kaitori-wine-accordion_menu.open {
   display: block;
+}
+
+.kaitori-wine-info {
+  gap: 10px;
+}
+
+.kaitori-wine-info + .kaitori-wine-info {
+  margin-top: 8px;
+}
+
+.kaitori-wine-info_label {
+  width: 99px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.kaitori-wine-info_value {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 639px) {
+  .kaitori-wine .kaitori-wine-lineup_heading {
+    margin-top: 20px;
+    padding: 8px 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .kaitori-wine-product {
+    padding: 24px 20px;
+  }
+
+  .kaitori-wine .kaitori-wine-product_name {
+    font-size: 18px;
+  }
+
+  .kaitori-wine-product_main {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .kaitori-wine-product_image {
+    flex-basis: 200px;
+    width: 200px;
+  }
+
+  .kaitori-wine-specs {
+    width: 100%;
+  }
+
+  .kaitori-wine-spec {
+    gap: 19px;
+  }
+
+  .kaitori-wine-spec_label,
+  .kaitori-wine-spec_value {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .kaitori-wine-description {
+    font-size: 14px;
+  }
+
+  .kaitori-wine-accordion {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .kaitori-wine-accordion .material-symbols-outlined {
+    right: 18px;
+  }
+
+  .kaitori-wine-accordion_menu {
+    padding: 8px 16px 16px;
+  }
+
+  .kaitori-wine-info {
+    gap: 12px;
+  }
+
+  .kaitori-wine-info_label,
+  .kaitori-wine-info_value {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .kaitori-wine-info_label {
+    width: 86px;
+  }
 }

@@ -38,21 +38,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }, DURATION);
   }
 
-  // 初期状態の同期（.kaitori-accordion_menu.open の有無に合わせる）
-  document.querySelectorAll(".kaitori-accordion_menu").forEach(function (menu) {
+  // 初期状態の同期（.kaitori-wine-accordion_menu.open の有無に合わせる）
+  document.querySelectorAll(".kaitori-wine-accordion_menu").forEach(function (menu) {
     var isOpen = menu.classList.contains("open");
     menu.style.display = isOpen ? "block" : "none";
     var accordion = menu.previousElementSibling;
-    if (accordion && accordion.classList.contains("kaitori-accordion")) {
+    if (accordion && accordion.classList.contains("kaitori-wine-accordion")) {
       accordion.classList.toggle("is-open", isOpen);
     }
   });
 
   // クリック時の開閉
-  document.querySelectorAll(".kaitori-accordion").forEach(function (accordion) {
+  document.querySelectorAll(".kaitori-wine-accordion").forEach(function (accordion) {
     accordion.addEventListener("click", function () {
       var menu = accordion.nextElementSibling;
-      if (!menu || !menu.classList.contains("kaitori-accordion_menu")) return;
+      if (!menu || !menu.classList.contains("kaitori-wine-accordion_menu")) return;
 
       var isOpen = accordion.classList.toggle("is-open");
       if (isOpen) {
