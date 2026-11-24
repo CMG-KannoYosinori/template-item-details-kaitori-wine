@@ -1,0 +1,67 @@
+.kaitori-kv_image {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.kaitori-kv_image img {
+  width: 100%;
+}
+
+.kaitori-product_section {
+  margin: 10px;
+  border: 2px solid #fceae0;
+}
+
+.kaitori-product_title {
+  background: #fffaec;
+  border-top: 1px solid #fceae0;
+  border-bottom: 1px solid #fceae0;
+  padding: 10px 5px;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 18px;
+}
+
+.kaitori-product_detail {
+  padding: 40px 20px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.kaitori-accordion_box {
+  overflow: hidden;
+}
+
+.kaitori-accordion {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.kaitori-accordion_title {
+  font-size: 18px;
+}
+
+.kaitori-accordion .material-symbols-outlined {
+  transform: rotate(180deg);
+  transition: transform 0.25s ease;
+}
+
+.kaitori-accordion.is-open .material-symbols-outlined {
+  transform: rotate(0deg);
+}
+
+.kaitori-accordion_menu {
+  display: none;
+  padding: 0 15px 15px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.kaitori-accordion_menu.open {
+  display: block;
+}
